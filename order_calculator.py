@@ -30,6 +30,10 @@ def calculate_order(
                 has_heavy_item = True
 
     # Business Rules
+    # Free shipping only if total price exceeds 100 and has heavy item
+    if total_price > 100 and has_heavy_item:
+        free_shipping = True
+
 
     return {
         "reference": order["reference"],
