@@ -55,7 +55,7 @@ def test_free_shipping_logic(products):
             {"productCode": "CCC", "quantity": 1},  # Heavy item
         ],
     }
-    # example message
+    # Hello World
     result = calculate_order(order, products)
     assert result["total"] == 168
     assert result["freeShipping"] is True
