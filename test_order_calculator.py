@@ -46,14 +46,16 @@ def test_unknown_product_ignored(products):
     result = calculate_order(order, products)
     assert result["total"] == 0
 
-# def test_free_shipping_logic(products):
-#     # Verify free shipping is applied correctly based on business rules.
-#     order = {
-#         "reference": "006",
-#         "items": [
-#             {"productCode": "CCC", "quantity": 1},  # Heavy item
-#         ],
-#     }
-#     result = calculate_order(order, products)
-#     assert result["total"] == 168
-#     assert result["freeShipping"] is True
+def test_free_shipping_logic(products):
+    # Verify free shipping is applied correctly based on business rules.
+    order = {
+        "reference": "006",
+        "items": [
+            {"productCode": "CCC", "quantity": 1},  # Heavy item
+        ],
+    }
+    # example message
+    result = calculate_order(order, products)
+    assert result["total"] == 168
+    assert result["freeShipping"] is True
+
