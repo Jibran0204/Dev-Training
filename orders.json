@@ -1,0 +1,41 @@
+[
+  {
+    "reference": "0001",
+    "items": [
+      {
+        "productCode": "AAA",
+        "quantity": 3
+      },
+      {
+        "productCode": "CCC",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "reference": "0002",
+    "items": [
+      {
+        "productCode": "BBB",
+        "quantity": 3
+      },
+      {
+        "productCode": "AAA",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "reference": "0003",
+    "items": [
+      {
+        "productCode": "FFF",
+        "quantity": 1
+      },
+      {
+        "productCode": "BBB",
+        "quantity": 1
+      }
+    ]
+  }
+]
