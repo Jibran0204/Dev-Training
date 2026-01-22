@@ -34,7 +34,6 @@ def calculate_order(
     if total_price > 100 and has_heavy_item:
         free_shipping = True
 
-
     return {
         "reference": order["reference"],
         "total": total_price,

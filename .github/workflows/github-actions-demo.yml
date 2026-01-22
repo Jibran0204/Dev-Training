@@ -3,13 +3,13 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  test:
+  test-and-lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - run: python -m venv dev
-      - run: source dev/bin/activate && pip install pytest
-      - run: source dev/bin/activate && pytest
+      - uses: astral-sh/setup-uv@v2
+      - run: uv venv
+      - run: uv pip install pytest ruff
+      - run: uv run pytest
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
